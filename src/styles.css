@@ -112,3 +112,16 @@ body {
   color: #fff;
   font-size: 16px;
 }
+.signature {
+  text-align: center;
+  color: #0f3057;
+  font-size: 12px;
+  opacity: 70%;
+}
+.signature-link {
+  color: #31bccc;
+  text-decoration: none;
+}
+.signature-link:hover {
+  text-decoration: underline;
+}
