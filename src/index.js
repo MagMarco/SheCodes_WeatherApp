@@ -88,30 +88,3 @@ function showTemperature(response) {
 }
 
 defaultCity("Kharkiv");
-// Feature #2
-// function changeCity(event) {
-//   event.preventDefault();
-//   let searchInput = document.querySelector("#change-city");
-//   let h1 = document.querySelector("h1");
-//   h1.innerHTML = searchInput.value;
-// }
-// let form = document.querySelector("#change-city-form");
-// form.addEventListener("submit", changeCity);
-// // Feature #3
-// function changeMode(event) {
-//   event.preventDefault();
-//   let tempCity = document.querySelector("#temp-city");
-//   let temp = tempCity.innerHTML;
-//   temp = Number(temp);
-//   tempCity.innerHTML = Math.round((temp * 9) / 5 + 32);
-// }
-// let fahrenheit = document.querySelector("#fahrenheit");
-// fahrenheit.addEventListener("click", changeMode);
-
-// function changeModeBack(event) {
-//   event.preventDefault();
-//   let tempCity = document.querySelector("#temp-city");
-//   tempCity.innerHTML = 28;
-// }
-// let celsius = document.querySelector("#celsius");
-// celsius.addEventListener("click", changeModeBack);
