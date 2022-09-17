@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link href="src/styles.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/d34ff2901e.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Weather app</title>
+  </head>
+  <body>
+    <div class="base">
+      <header class="top-city">
+        <div class="row">
+          <div class="col">London</div>
+          <div class="col">Paris</div>
+          <div class="col">Praha</div>
+          <div class="col">Warsaw</div>
+          <div class="col">Kyiv</div>
+        </div>
+      </header>
+      <div class="container">
+        <form id="change-city-form">
+          <input
+            type="text"
+            class="change-city"
+            id="change-city"
+            placeholder="Change city"
+          />
+          <input class="search-city" type="submit" value="Search" />
+          <input
+            id="current-city"
+            class="current-city"
+            type="button"
+            value="Current"
+          />
+        </form>
+        <section class="main">
+          <div class="main-city">
+            <h1 class="heading-city">Berlin</h1>
+            <h3 class="heading-data">Sunday, August 21</h3>
+            <h2 class="temp-main">
+              <span id="temp-city">28</span>
+              <span class="temp-mode"
+                ><a class="celsius" id="celsius" href="#">°C</a> |
+                <a class="fahrenheit" id="fahrenheit" href="#">°F</a></span
+              >
+            </h2>
+          </div>
+          <div class="current-sky">
+            <i class="fa-solid fa-sun icon-sky"></i>
+            <br />
+            <p id="about-weather">Clear</p>
+          </div>
+        </section>
+
+        <section class="forecast">
+          <div class="row">
+            <div class="col">
+              <div class="forecast-day">
+                <div class="forecast-day-header">Mon 15</div>
+                <p>
+                  🌤
+                  <br />
+                  27°C
+                </p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="forecast-day">
+                <div class="forecast-day-header">Tue 16</div>
+                <p>
+                  🌧
+                  <br />
+                  25°C
+                </p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="forecast-day">
+                <div class="forecast-day-header">Wed 17</div>
+                <p>
+                  🌧
+                  <br />
+                  26°C
+                </p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="forecast-day">
+                <div class="forecast-day-header">Thu 18</div>
+                <p>
+                  🌤
+                  <br />
+                  29°C
+                </p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="forecast-day">
+                <div class="forecast-day-header">Fri 19</div>
+                <p>
+                  ☀
+                  <br />
+                  30°C
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>

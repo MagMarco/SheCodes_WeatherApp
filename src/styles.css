@@ -1,0 +1,114 @@
+body {
+  font-family: sans-serif;
+}
+.base {
+  margin: 0 auto;
+  padding: 10px 30px;
+  max-width: 700px;
+  background-color: #e1f6f4;
+  border-radius: 10px;
+}
+.top-city {
+  background-color: #31bccc;
+  padding: 25px 30px 15px 30px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 20px;
+}
+.change-city {
+  margin: 10px auto;
+  max-width: 70%;
+}
+.search-city,
+.current-city {
+  text-align: center;
+  border-radius: 30px;
+  padding: 4px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.search-city {
+  background-color: #4de9ee;
+  border: 3px solid #31bccc;
+  color: #0f3057;
+}
+.current-city {
+  background-color: #31bccc;
+  border: 3px solid #4de9ee;
+  color: #fff;
+}
+.search-city:hover,
+.current-city:hover {
+  background-color: #a7efe9;
+  color: #31bccc;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+.main-city {
+  background-color: #fff;
+  border: 6px solid #31bccc;
+  border-radius: 50%;
+  padding: 20px;
+}
+.heading-city {
+  text-align: center;
+  color: #0f3057;
+  font-size: 38px;
+  font-weight: 700;
+}
+.temp-main {
+  text-align: center;
+  color: #0f3057;
+  font-size: 68px;
+  font-weight: 700;
+}
+.heading-data {
+  text-align: center;
+  color: #31bccc;
+  font-size: 18px;
+  font-weight: 700;
+}
+.temp-mode {
+  position: relative;
+  top: -28px;
+  font-size: 28px;
+  text-decoration: none;
+}
+.celsius,
+.fahrenheit {
+  color: #0f3057;
+  text-decoration: none;
+}
+.celsius:hover,
+.fahrenheit:hover {
+  color: #31bccc;
+}
+.current-sky {
+  text-align: center;
+}
+.current-sky > p {
+  color: #0f3057;
+  font-size: 22px;
+  opacity: 70%;
+}
+.icon-sky {
+  font-size: 68px;
+  color: orange;
+}
+.forecast-day {
+  text-align: center;
+  background-color: #4de9ee;
+  border: 3px solid #31bccc;
+  border-radius: 45px;
+  padding: 15px 0px 5px;
+  color: #0f3057;
+  font-size: 22px;
+  font-weight: 700;
+}
+.forecast-day-header {
+  color: #fff;
+  font-size: 16px;
+}
