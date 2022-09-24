@@ -89,9 +89,12 @@ body {
 .current-sky {
   text-align: center;
 }
-.current-sky > p {
+.weather-now {
+  text-align: left;
   color: #0f3057;
-  font-size: 22px;
+  font-size: 18px;
+  list-style: none;
+  line-height: 22px;
   opacity: 70%;
 }
 .icon-sky {
