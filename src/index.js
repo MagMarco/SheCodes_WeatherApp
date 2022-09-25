@@ -85,6 +85,10 @@ function showTemperature(response) {
   tempCity.innerHTML = temp;
   document.querySelector("#about-weather").innerHTML =
     response.data.weather[0].main;
+  let humidity = response.data.main.humidity;
+  let wind = Math.round(response.data.wind.speed);
+  document.querySelector("#humidity").innerHTML = `${humidity}%`;
+  document.querySelector("#wind").innerHTML = `${wind} Km/H`;
 }
 
 defaultCity("Kharkiv");
