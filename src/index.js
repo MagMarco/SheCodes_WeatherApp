@@ -89,6 +89,13 @@ function showTemperature(response) {
   let wind = Math.round(response.data.wind.speed);
   document.querySelector("#humidity").innerHTML = `${humidity}%`;
   document.querySelector("#wind").innerHTML = `${wind} Km/H`;
+  let iconSky = document.querySelector("#icon-sky");
+  let currentIcon = response.data.weather[0].icon;
+  iconSky.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${currentIcon}@2x.png`
+  );
+  iconSky.setAttribute("alt", response.data.weather[0].description);
 }
 
 defaultCity("Kharkiv");
