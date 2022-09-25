@@ -106,20 +106,6 @@ body {
   line-height: 22px;
   opacity: 70%;
 }
-.forecast-day {
-  text-align: center;
-  background-color: #4de9ee;
-  border: 3px solid #31bccc;
-  border-radius: 45px;
-  padding: 15px 0px 5px;
-  color: #0f3057;
-  font-size: 22px;
-  font-weight: 700;
-}
-.forecast-day-header {
-  color: #fff;
-  font-size: 16px;
-}
 .signature {
   text-align: center;
   color: #0f3057;
