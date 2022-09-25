@@ -76,17 +76,18 @@ let button = document.querySelector("#current-city");
 button.addEventListener("click", currentCity);
 // show temp
 function showTemperature(response) {
-  console.log(response.data);
+  celsiusTemp = response.data.main.temp;
   let temp = Math.round(response.data.main.temp);
   let newCity = response.data.name;
 
   h1.innerHTML = newCity;
   let tempCity = document.querySelector("#temp-city");
+  let humidity = response.data.main.humidity;
+  let wind = Math.round(response.data.wind.speed);
+
   tempCity.innerHTML = temp;
   document.querySelector("#about-weather").innerHTML =
     response.data.weather[0].main;
-  let humidity = response.data.main.humidity;
-  let wind = Math.round(response.data.wind.speed);
   document.querySelector("#humidity").innerHTML = `${humidity}%`;
   document.querySelector("#wind").innerHTML = `${wind} Km/H`;
   let iconSky = document.querySelector("#icon-sky");
@@ -99,3 +100,23 @@ function showTemperature(response) {
 }
 
 defaultCity("Kharkiv");
+// change unit temp
+function changeMode(event) {
+  event.preventDefault();
+  let tempCity = document.querySelector("#temp-city");
+  tempCity.innerHTML = Math.round((celsiusTemp * 9) / 5 + 32);
+  celsiusLink.classList.remove("active-link");
+  fahrenheit.classList.add("active-link");
+}
+function displayCelsiusTemp(event) {
+  event.preventDefault();
+  let tempCity = document.querySelector("#temp-city");
+  tempCity.innerHTML = Math.round(celsiusTemp);
+  fahrenheit.classList.remove("active-link");
+  celsiusLink.classList.add("active-link");
+}
+let celsiusTemp = null;
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", changeMode);
+let celsiusLink = document.querySelector("#celsius");
+celsiusLink.addEventListener("click", displayCelsiusTemp);

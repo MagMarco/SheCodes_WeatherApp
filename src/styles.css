@@ -74,16 +74,21 @@ body {
   position: relative;
   top: -28px;
   font-size: 28px;
+}
+.temp-mode-link {
+  color: #31bccc;
   text-decoration: none;
 }
-.celsius,
-.fahrenheit {
+.temp-mode-link:hover {
+  color: #4de9ee;
+}
+.active-link {
+  color: #0f3057;
+  cursor: default;
+}
+.active-link:hover {
   color: #0f3057;
   text-decoration: none;
-}
-.celsius:hover,
-.fahrenheit:hover {
-  color: #31bccc;
 }
 .current-sky {
   margin: 10px;
