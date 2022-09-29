@@ -112,6 +112,7 @@ body {
   text-align: center;
   background-color: #fff;
   border-radius: 25px;
+  margin: 5px;
   padding: 10px 0;
   color: #0f3057;
   font-size: 22px;
@@ -123,7 +124,7 @@ body {
 }
 .forecast-temp {
   color: #0f3057;
-  font-size: 16px;
+  font-size: 18px;
 }
 .forecast-temp-min {
   opacity: 0.5;

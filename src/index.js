@@ -43,6 +43,34 @@ function formatDate(date) {
 let h3 = document.querySelector("h3");
 h3.innerHTML = formatDate(today);
 
+// show forecast
+function showForecast() {
+  let forecastEl = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let daysF = ["Fri", "Sat", "Sun", "Mon", "Tue"];
+  daysF.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+            <div class="col-2 forecast-day">
+                <div class="forecast-day-header">${day}</div>
+                <img
+                  src="http://openweathermap.org/img/wn/10d@2x.png"
+                  alt=""
+                  width="45"
+                />
+                <div class="forecast-temp">
+                  <span class="forecast-temp-max">27°</span>
+                  <span class="forecast-temp-min">17°</span>
+                </div>
+            </div>
+          `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastEl.innerHTML = forecastHTML;
+}
+
 // search city
 function defaultCity(city) {
   let apiKey = "9b73d63d9f5a648889da1648b3215332";
@@ -99,7 +127,6 @@ function showTemperature(response) {
   iconSky.setAttribute("alt", response.data.weather[0].description);
 }
 
-defaultCity("Kharkiv");
 // change unit temp
 function changeMode(event) {
   event.preventDefault();
@@ -120,3 +147,6 @@ let fahrenheit = document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click", changeMode);
 let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
+
+defaultCity("Kharkiv");
+showForecast();
