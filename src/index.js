@@ -44,7 +44,8 @@ let h3 = document.querySelector("h3");
 h3.innerHTML = formatDate(today);
 
 // show forecast
-function showForecast() {
+function showForecast(response) {
+  console.log(response.data.daily);
   let forecastEl = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   let daysF = ["Fri", "Sat", "Sun", "Mon", "Tue"];
@@ -88,7 +89,7 @@ function changeCity(event) {
 let searchInput = document.querySelector("#change-city");
 let h1 = document.querySelector("h1");
 function showPosition(position) {
-  let apiKey = "9b73d63d9f5a648889da1648b3215332";
+  let apiKey = "2ff29bed3181c3526c35cc5408037f85";
   let units = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=${units}`;
 
@@ -103,6 +104,13 @@ function currentCity(event) {
 let button = document.querySelector("#current-city");
 button.addEventListener("click", currentCity);
 // show temp
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "2ff29bed3181c3526c35cc5408037f85";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showForecast);
+}
+
 function showTemperature(response) {
   celsiusTemp = response.data.main.temp;
   let temp = Math.round(response.data.main.temp);
@@ -125,6 +133,8 @@ function showTemperature(response) {
     `http://openweathermap.org/img/wn/${currentIcon}@2x.png`
   );
   iconSky.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 // change unit temp
@@ -149,4 +159,3 @@ let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 defaultCity("Kharkiv");
-showForecast();
