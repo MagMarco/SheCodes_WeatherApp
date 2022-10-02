@@ -10,7 +10,8 @@ body {
 }
 .top-city {
   background-color: #31bccc;
-  padding: 25px 30px 15px 30px;
+  padding: 20px;
+  margin: 0 5px 10px;
   border-radius: 5px;
   color: #fff;
   font-size: 20px;
@@ -67,30 +68,15 @@ body {
   font-weight: 700;
 }
 .heading-data {
-  text-align: center;
   color: #31bccc;
   font-size: 18px;
   font-weight: 700;
 }
 .temp-mode {
   position: relative;
-  top: -28px;
-  font-size: 28px;
-}
-.temp-mode-link {
-  color: #31bccc;
-  text-decoration: none;
-}
-.temp-mode-link:hover {
-  color: #4de9ee;
-}
-.active-link {
+  top: -30px;
+  font-size: 24px;
   color: #0f3057;
-  cursor: default;
-}
-.active-link:hover {
-  color: #0f3057;
-  text-decoration: none;
 }
 .current-sky {
   margin: 10px;
@@ -107,6 +93,10 @@ body {
   list-style: none;
   line-height: 22px;
   opacity: 70%;
+}
+.about-weather {
+  color: #31bccc;
+  font-weight: 500;
 }
 .forecast-day {
   text-align: center;

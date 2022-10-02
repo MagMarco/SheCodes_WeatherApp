@@ -153,25 +153,4 @@ function showTemperature(response) {
   getForecast(response.data.coord);
 }
 
-// change unit temp
-function changeMode(event) {
-  event.preventDefault();
-  let tempCity = document.querySelector("#temp-city");
-  tempCity.innerHTML = Math.round((celsiusTemp * 9) / 5 + 32);
-  celsiusLink.classList.remove("active-link");
-  fahrenheit.classList.add("active-link");
-}
-function displayCelsiusTemp(event) {
-  event.preventDefault();
-  let tempCity = document.querySelector("#temp-city");
-  tempCity.innerHTML = Math.round(celsiusTemp);
-  fahrenheit.classList.remove("active-link");
-  celsiusLink.classList.add("active-link");
-}
-let celsiusTemp = null;
-let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", changeMode);
-let celsiusLink = document.querySelector("#celsius");
-celsiusLink.addEventListener("click", displayCelsiusTemp);
-
 defaultCity("Kharkiv");
